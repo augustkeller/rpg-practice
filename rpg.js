@@ -11,5 +11,6 @@ function heal (health){
 }
 
 fireball(5);
+heal(100);
 
 console.log(startingHealth);
