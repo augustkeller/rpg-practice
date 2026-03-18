@@ -1,18 +1,18 @@
-let protagonistHealth = 50;
-let antagonistHealth = 50;
+let protagonist = { health: 50 };
+let antagonist = { health: 50 };
 
-function fireball (damage, target){
-    protagonistHealth -= damage;
-    return `You deal ${damage} damage!`;
+function fireball(damage, target) {
+  target.health -= damage;
+  return `You deal ${damage} damage!`;
 }
 
-function heal (health, target){
-    protagonistHealth += health
-    return `You heal ${health} life!`;
+function heal(amount, target) {
+  target.health += amount;
+  return `You heal ${amount} life!`;
 }
 
-fireball(5);
-heal(100);
+fireball(5, antagonist);
+heal(100, protagonist);
 
-console.log(protagonistHealth);
-console.log(antagonistHealth);
+console.log(protagonist.health);
+console.log(antagonist.health);
