@@ -1,5 +1,16 @@
-let protagonist = { name: "protagonist", health: 50 };
-let antagonist = { name: "antagonist", health: 50 };
+class Character {
+  constructor(name, health) {
+    this.name = name;
+    this.health = health;
+  }
+
+  displayDetails() {
+    console.log(`The character named ${this.name} has ${this.health} health.`);
+  }
+}
+
+let protagonist = new Character("Protagonist", 50);
+let antagonist = new Character("Antagonist", 50);
 
 function fireball(amount, target) {
   target.health -= amount;
@@ -14,5 +25,5 @@ function heal(amount, target) {
 fireball(5, antagonist);
 heal(100, protagonist);
 
-console.log(protagonist);
-console.log(antagonist);
+protagonist.displayDetails();
+antagonist.displayDetails();
