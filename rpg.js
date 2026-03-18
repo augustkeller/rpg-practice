@@ -22,8 +22,8 @@ function heal(amount, target) {
   return `You heal ${amount} life!`;
 }
 
-fireball(5, antagonist);
-heal(100, protagonist);
+console.log(fireball(5, antagonist));
+console.log(heal(100, protagonist));
 
 protagonist.displayDetails();
 antagonist.displayDetails();
