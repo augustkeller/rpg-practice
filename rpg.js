@@ -10,4 +10,6 @@ function heal (health){
     return `You heal ${health} life!`;
 }
 
+fireball(5);
+
 console.log(startingHealth);
