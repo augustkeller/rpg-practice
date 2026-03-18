@@ -1,5 +1,5 @@
-let protagonist = { health: 50 };
-let antagonist = { health: 50 };
+let protagonist = { name: "protagonist", health: 50 };
+let antagonist = { name: "antagonist", health: 50 };
 
 function fireball(amount, target) {
   target.health -= amount;
@@ -14,5 +14,5 @@ function heal(amount, target) {
 fireball(5, antagonist);
 heal(100, protagonist);
 
-console.log(protagonist.health);
-console.log(antagonist.health);
+console.log(protagonist);
+console.log(antagonist);
