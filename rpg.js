@@ -1,11 +1,13 @@
+let startingHealth = 50;
+
 function fireball (damage){
+    startingHealth -= damage;
     return `You deal ${damage} damage!`;
 }
 
-console.log(fireball(5));
-
 function heal (health){
+    startingHealth += health
     return `You heal ${health} life!`;
 }
 
-console.log(heal(5));
+console.log(startingHealth);
