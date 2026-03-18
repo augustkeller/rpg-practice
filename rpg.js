@@ -13,7 +13,10 @@ let protagonist = new Character("Protagonist", 50);
 let antagonist = new Character("Antagonist", 50);
 
 class CharacterAction {
-    //replace fireball and heal functions here
+    constructor(name) {
+    this.name = name;
+  }
+
 }
 
 function fireball(amount, target) {
