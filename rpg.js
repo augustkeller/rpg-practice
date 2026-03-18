@@ -1,9 +1,9 @@
 let protagonist = { health: 50 };
 let antagonist = { health: 50 };
 
-function fireball(damage, target) {
-  target.health -= damage;
-  return `You deal ${damage} damage!`;
+function fireball(amount, target) {
+  target.health -= amount;
+  return `You deal ${amount} damage!`;
 }
 
 function heal(amount, target) {
