@@ -14,12 +14,12 @@ let antagonist = new Character("Antagonist", 50);
 
 function fireball(amount, target) {
   target.health -= amount;
-  return `You deal ${amount} damage!`;
+  return `You deal ${amount} damage to ${target.name}!`;
 }
 
 function heal(amount, target) {
   target.health += amount;
-  return `You heal ${amount} life!`;
+  return `You heal ${amount} life to ${target.name}!`;
 }
 
 console.log(fireball(5, antagonist));
