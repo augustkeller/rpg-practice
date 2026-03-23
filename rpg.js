@@ -1,8 +1,9 @@
 class Character {
-  constructor(name, health, action) {
+  constructor(name, health, actionOne, actionTwo = null) {
     this.name = name;
     this.health = health;
-    this.action = action;
+    this.actionOne = actionOne;
+    this.actionTwo = actionTwo;
   }
 
   displayDetails() {
