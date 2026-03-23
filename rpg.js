@@ -15,16 +15,16 @@ let antagonist = new Character("Antagonist", 50, fireball);
 
 function fireball(amount, target) {
   target.health -= amount;
-  return `You deal ${amount} damage to ${target.name}!`;
+  return `${this.name} deals ${amount} damage to ${target.name}!`;
 }
 
 function heal(amount, target) {
   target.health += amount;
-  return `You heal ${amount} life to ${target.name}!`;
+  return `${this.name} heals ${amount} life to ${target.name}!`;
 }
 
-console.log(fireball(5, antagonist));
-console.log(heal(100, protagonist));
+console.log(antagonist.action(5, protagonist));
+console.log(protagonist.action(100, antagonist));
 
 protagonist.displayDetails();
 antagonist.displayDetails();
