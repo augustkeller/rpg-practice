@@ -12,13 +12,6 @@ class Character {
 let protagonist = new Character("Protagonist", 50);
 let antagonist = new Character("Antagonist", 50);
 
-class CharacterAction {
-    constructor(name) {
-    this.name = name;
-  }
-
-}
-
 function fireball(amount, target) {
   target.health -= amount;
   return `You deal ${amount} damage!`;
