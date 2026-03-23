@@ -1,7 +1,8 @@
 class Character {
-  constructor(name, health) {
+  constructor(name, health, action) {
     this.name = name;
     this.health = health;
+    this.action = action;
   }
 
   displayDetails() {
@@ -9,8 +10,8 @@ class Character {
   }
 }
 
-let protagonist = new Character("Protagonist", 50);
-let antagonist = new Character("Antagonist", 50);
+let protagonist = new Character("Protagonist", 50, heal);
+let antagonist = new Character("Antagonist", 50, fireball);
 
 function fireball(amount, target) {
   target.health -= amount;
