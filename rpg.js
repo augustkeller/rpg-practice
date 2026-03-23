@@ -24,8 +24,8 @@ function heal(amount, target) {
   return `${this.name} heals ${amount} life to ${target.name}!`;
 }
 
-console.log(antagonist.action(5, protagonist));
-console.log(protagonist.action(100, antagonist));
+console.log(antagonist.actionOne(5, protagonist));
+console.log(protagonist.actionOne(100, antagonist));
 
 protagonist.displayDetails();
 antagonist.displayDetails();
