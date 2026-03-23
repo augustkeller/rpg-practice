@@ -1,5 +1,5 @@
 class Character {
-  constructor(name, health, actionOne, actionTwo = null) {
+  constructor(name, health, actionOne = null, actionTwo = null) {
     this.name = name;
     this.health = health;
     this.actionOne = actionOne;
