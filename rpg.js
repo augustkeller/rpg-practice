@@ -15,12 +15,14 @@ class Character {
 let protagonist = new Character("Protagonist", 1, heal);
 let antagonist = new Character("Antagonist", 1, fireball);
 
-function fireball(amount, target) {
+function fireball(target) {
+  amount = (this.level*5);
   target.health -= amount;
   return `${this.name} deals ${amount} damage to ${target.name}!`;
 }
 
-function heal(amount, target) {
+function heal(target) {
+  amount = (this.level*5);
   target.health += amount;
   return `${this.name} heals ${amount} life to ${target.name}!`;
 }
