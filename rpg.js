@@ -12,8 +12,8 @@ class Character {
   }
 }
 
-let protagonist = new Character("Protagonist", 50, heal);
-let antagonist = new Character("Antagonist", 50, fireball);
+let protagonist = new Character("Protagonist", 1, heal);
+let antagonist = new Character("Antagonist", 1, fireball);
 
 function fireball(amount, target) {
   target.health -= amount;
