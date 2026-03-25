@@ -12,7 +12,7 @@ class Character {
   }
 }
 
-let protagonist = new Character("Protagonist", 1, heal);
+let protagonist = new Character("Protagonist", 2, heal);
 let antagonist = new Character("Antagonist", 1, fireball);
 
 function fireball(target) {
