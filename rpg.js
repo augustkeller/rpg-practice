@@ -1,7 +1,8 @@
 class Character {
-  constructor(name, health, actionOne = null, actionTwo = null) {
+  constructor(name, level, actionOne = null, actionTwo = null) {
     this.name = name;
-    this.health = health;
+    this.level = level;
+    this.health = (level*50);
     this.actionOne = actionOne;
     this.actionTwo = actionTwo;
   }
