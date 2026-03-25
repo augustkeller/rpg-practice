@@ -8,7 +8,11 @@ class Character {
   }
 
   displayDetails() {
-    console.log(`The character named ${this.name} has ${this.health} health.`);
+    if (this.actionTwo !== null){
+      console.log(`The character named ${this.name} has ${this.health} health. Their abilities are ${this.actionOne.name} and ${this.actionTwo.name}.`);
+    } else {
+      console.log(`The character named ${this.name} has ${this.health} health. Their ability is ${this.actionOne.name}.`);
+    }
   }
 }
 
