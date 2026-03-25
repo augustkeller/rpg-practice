@@ -9,9 +9,9 @@ class Character {
 
   displayDetails() {
     if (this.actionTwo !== null){
-      console.log(`The character named ${this.name} has ${this.health} health. Their abilities are ${this.actionOne.name} and ${this.actionTwo.name}.`);
+      console.log(`The character named ${this.name} is level ${this.level} and has ${this.health} health. Their abilities are ${this.actionOne.name} and ${this.actionTwo.name}.`);
     } else {
-      console.log(`The character named ${this.name} has ${this.health} health. Their ability is ${this.actionOne.name}.`);
+      console.log(`The character named ${this.name} is level ${this.level} and has ${this.health} health. Their ability is ${this.actionOne.name}.`);
     }
   }
 }
