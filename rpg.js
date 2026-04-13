@@ -42,7 +42,7 @@ function blizzard(){
   amount = (this.level/2);
   Character.instances.health -= amount;
   Character.instances.forEach((instance, instance.health) => {
-    console.log(`${instance}: ${instance.health}`);
+    return `${instance.name} damaged ${amount}, ${instance.health} life remaining!`);
   });
 }
 
