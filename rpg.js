@@ -1,14 +1,3 @@
-class MyClass {
-  static instances = [];
-  constructor() {
-    MyClass.instances.push(this);
-  }
-
-  static callAll(methodName) {
-    MyClass.instances.forEach(instance => instance[methodName]());
-  }
-}
-
 class Character {
   static instances = [];
 
@@ -27,6 +16,10 @@ class Character {
     } else {
       console.log(`The character named ${this.name} is level ${this.level} and has ${this.health} health. Their ability is ${this.actionOne.name}.`);
     }
+  }
+
+  static callAll(methodName) {
+    Character.instances.forEach(instance => instance[methodName]());
   }
 }
 
