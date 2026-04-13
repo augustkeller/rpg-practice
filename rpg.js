@@ -31,6 +31,10 @@ function heal(target) {
   return `${this.name} heals ${amount} life to ${target.name}!`;
 }
 
+function blizzard(){
+  
+}
+
 console.log(antagonist.actionOne(protagonist));
 console.log(protagonist.actionOne(antagonist));
 
