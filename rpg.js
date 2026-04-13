@@ -1,10 +1,24 @@
+class MyClass {
+  static instances = [];
+  constructor() {
+    MyClass.instances.push(this);
+  }
+
+  static callAll(methodName) {
+    MyClass.instances.forEach(instance => instance[methodName]());
+  }
+}
+
 class Character {
+  static instances = [];
+
   constructor(name, level, actionOne = null, actionTwo = null) {
     this.name = name;
     this.level = level;
     this.health = (level*10);
     this.actionOne = actionOne;
     this.actionTwo = actionTwo;
+    Character.instances.push(this);
   }
 
   displayDetails() {
@@ -32,7 +46,8 @@ function heal(target) {
 }
 
 function blizzard(){
-  
+  amount = (this.level/2);
+
 }
 
 console.log(antagonist.actionOne(protagonist));
