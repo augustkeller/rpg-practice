@@ -40,11 +40,12 @@ function heal(target) {
   return `${this.name} heals ${amount} life to ${target.name}!`;
 }
 
-function blizzard(){
-  let amount = (this.level/2);
-  Character.instances.health -= amount;
-  Character.instances.forEach((instance, instance.health) => {
-    return `${instance.name} damaged ${amount}, ${instance.health} life remaining!`);
+function blizzard() {
+  let amount = this.level / 2;
+
+  Character.instances.forEach(instance => {
+    instance.health -= amount;
+    console.log(`${instance.name} takes ${amount} damage, ${instance.health} health remaining!`);
   });
 }
 
