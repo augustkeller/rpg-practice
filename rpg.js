@@ -43,10 +43,12 @@ function heal(target) {
 function blizzard() {
   let amount = this.level / 2;
 
-  Character.instances.forEach(instance => {
+  const results = Character.instances.map(instance => {
     instance.health -= amount;
-    console.log(`${instance.name} takes ${amount} damage, ${instance.health} health remaining!`);
+    return `${instance.name} takes ${amount} damage, ${instance.health} health remaining!`;
   });
+
+  return results.join("\n");
 }
 
 console.log(antagonist.actionOne(protagonist));
