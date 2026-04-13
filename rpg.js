@@ -4,9 +4,11 @@ class Character {
   constructor(name, level, actionOne = null, actionTwo = null) {
     this.name = name;
     this.level = level;
-    this.health = (level*10);
-    this.actionOne = actionOne;
-    this.actionTwo = actionTwo;
+    this.health = level * 10;
+
+    this.actionOne = actionOne ? actionOne.bind(this) : null;
+    this.actionTwo = actionTwo ? actionTwo.bind(this) : null;
+
     Character.instances.push(this);
   }
 
