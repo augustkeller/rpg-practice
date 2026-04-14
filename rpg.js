@@ -54,6 +54,8 @@ function blizzard() {
 
 console.log(antagonist.actionOne(protagonist));
 console.log(protagonist.actionOne(antagonist));
+console.log(blizzardWizard.actionOne());
 
 protagonist.displayDetails();
 antagonist.displayDetails();
+blizzardWizard.displayDetails();
