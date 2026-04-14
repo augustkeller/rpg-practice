@@ -30,7 +30,7 @@ constructor(name, level, actionOne = null, actionTwo = null) {
 
 let protagonist = new Character("Protagonist", 2, heal, fireball);
 let antagonist = new Character("Antagonist", 1, fireball);
-let blizzardWizard = new Character("blizzardWizard", 2, blizzard);
+let blizzardWizard = new Character("blizzardWizard", 4, blizzard);
 
 function fireball(target) {
   let amount = (this.level*2);
