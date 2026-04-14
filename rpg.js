@@ -59,7 +59,7 @@ function blizzard() {
 
 let actionSelected;
 do {
-  actionSelected = readlineSync.question('choose an action (1 or 2)? ');
+  actionSelected = readlineSync.question('choose an action (heal - 1 or fireball - 2)? ');
 } while (Number(actionSelected) !== 1 && Number(actionSelected) !== 2);
 
 if (Number(actionSelected) === 1) {
