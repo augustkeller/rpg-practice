@@ -1,3 +1,5 @@
+const readlineSync = require('readline-sync');
+
 class Character {
   static instances = [];
 
@@ -55,10 +57,6 @@ function blizzard() {
   return results.join("\n");
 }
 
-console.log(antagonist.actionOne(protagonist));
-console.log(protagonist.actionOne(antagonist));
-console.log(blizzardWizard.actionOne());
+const actionSelected = readlineSync.question('choose an action? ');
 
-protagonist.displayDetails();
-antagonist.displayDetails();
-blizzardWizard.displayDetails();
+console.log(protagonist.actionSelected(protagonist));
