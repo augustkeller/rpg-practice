@@ -1,22 +1,25 @@
 class Character {
   static instances = [];
 
-  constructor(name, level, actionOne = null, actionTwo = null) {
-    this.name = name;
-    this.level = level;
-    this.health = level * 10;
+constructor(name, level, actionOne = null, actionTwo = null) {
+  this.name = name;
+  this.level = level;
+  this.health = level * 10;
 
-    this.actionOne = actionOne ? actionOne.bind(this) : null;
-    this.actionTwo = actionTwo ? actionTwo.bind(this) : null;
+  this.actionOne = actionOne ? actionOne.bind(this) : null;
+  this.actionTwo = actionTwo ? actionTwo.bind(this) : null;
 
-    Character.instances.push(this);
-  }
+  this.actionOneName = actionOne ? actionOne.name : null;
+  this.actionTwoName = actionTwo ? actionTwo.name : null;
+
+  Character.instances.push(this);
+}
 
   displayDetails() {
     if (this.actionTwo !== null){
-      console.log(`The character named ${this.name} is level ${this.level} and has ${this.health} health. Their abilities are ${this.actionOne.name} and ${this.actionTwo.name}.`);
+      console.log(`The character named ${this.name} is level ${this.level} and has ${this.health} health. Their abilities are ${this.actionOneName} and ${this.actionTwoName}.`);
     } else {
-      console.log(`The character named ${this.name} is level ${this.level} and has ${this.health} health. Their ability is ${this.actionOne.name}.`);
+      console.log(`The character named ${this.name} is level ${this.level} and has ${this.health} health. Their ability is ${this.actionOneName}.`);
     }
   }
 
