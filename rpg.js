@@ -57,9 +57,10 @@ function blizzard() {
   return results.join("\n");
 }
 
+let actionSelected;
 do {
-const actionSelected = readlineSync.question('choose an action (1 or 2)? ');
-} while (Number(actionSelected) === 1 || Number(actionSelected) === 2);
+  actionSelected = readlineSync.question('choose an action (1 or 2)? ');
+} while (Number(actionSelected) !== 1 && Number(actionSelected) !== 2);
 
 if (Number(actionSelected) === 1) {
 console.log(protagonist.actionOne(protagonist));
