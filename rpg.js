@@ -57,6 +57,11 @@ function blizzard() {
   return results.join("\n");
 }
 
-const actionSelected = readlineSync.question('choose an action? ');
+const actionSelected = readlineSync.question('choose an action (1 or 2)? ');
 
-console.log(protagonist.actionSelected(protagonist));
+if (actionSelected.Number() === 1) {
+console.log(protagonist.actionOne(protagonist));
+}
+if (actionSelected.Number() === 2) {
+console.log(protagonist.actionTwo(antagonist));
+}
